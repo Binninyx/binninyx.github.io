@@ -1,0 +1,96 @@
+.product__preview {
+  position: relative;
+  margin: auto auto;
+  flex-shrink: 0;
+}
+
+#svg {
+  height: 150px;
+  width: 150px;
+}
+
+rect {
+  fill: #d3d3d3;
+  stroke: black;
+  stroke-width: 1px;
+  opacity: 0.02;
+}
+
+#offset {
+  opacity: 0.05;
+}
+
+.line {
+  stroke: rgb(255, 145, 0);
+  color: rgb(255, 145, 0);
+}
+
+.red {
+  stroke: rgb(255, 0, 0);
+  color: rgb(255, 0, 0);
+}
+.darkblue {
+  stroke: rgb(45, 88, 255);
+  color: rgb(45, 88, 255);
+}
+.green {
+  stroke: rgb(4, 255, 0);
+  color: rgb(4, 255, 0);
+}
+.orange {
+  stroke: rgb(255, 145, 0);
+  color: rgb(255, 145, 0);
+}
+.yellow {
+  stroke: yellow;
+  color: yellow;
+}
+.purple {
+  stroke: rgb(184, 104, 255);
+  color: rgb(184, 104, 255);
+}
+.blue {
+  stroke: rgb(74, 203, 255);
+  color: rgb(74, 203, 255);
+}
+.pink {
+  stroke: rgb(255, 82, 232);
+  color: rgb(255, 82, 232);
+}
+.lightblue {
+  stroke: rgb(0, 255, 185);
+  color: rgb(0, 255, 185);
+}
+.coldwhite {
+  stroke: white;
+  color: white;
+}
+.warmwhite {
+  stroke: rgb(252, 246, 186);
+  color: rgb(252, 246, 186);
+}
+
+.red-glow {
+  filter: url(#red-glow);
+}
+.cold-glow {
+  filter: url(#cold-glow);
+}
+.pink-glow {
+  filter: url(#pink-glow);
+}
+.green-glow {
+  filter: url(#green-glow);
+}
+.yellow-glow {
+  filter: url(#yellow-glow);
+}
+.darkblue-glow {
+  filter: url(#darkblue-glow);
+}
+.warm-glow {
+  filter: url(#warm-glow);
+}
+.white-glow {
+  filter: url(#white-glow);
+}

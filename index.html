@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="svg.css" />
+    <title>EasyCalc</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="params__inputs">
+        <div class="input__text">
+          <div
+            class="text__content"
+            contenteditable="true"
+            spellcheck="false"
+            style="color: rgb(255, 145, 0)"
+          >
+            <div>EasyNeon</div>
+          </div>
+          <div class="text__options"></div>
+        </div>
+        <div class="input__counter input__item">
+          <div id="square" class="counter__item active">Квадратная</div>
+          |
+          <div id="figure" class="counter__item ">Фигурная</div>
+        </div>
+
+        <div class="input__offset input__item">
+          <div class="offset__label">Размер подложки</div>
+          <input class="offset__number" type="number" value="5" />
+        </div>
+        <div class="input__scale input__item">
+          <div class="scale__label">Размер</div>
+          <input class="scale__number" type="number" value="10" />
+        </div>
+        <div class="input__margin input__item">
+          <div class="margin__label">Отступ</div>
+          <input class="margin__number" type="number" value="20" />
+        </div>
+        <div class="input__align input__item">
+          <div id="left" class="align__item">Left</div>
+          |
+          <div id="center" class="align__item active ">Center</div>
+          |
+          <div id="right" class="align__item ">Right</div>
+        </div>
+        <div class="input__neon input__item">
+          <div id="6mm" class="neon__item active">6мм</div>
+          |
+          <div id="8mm" class="neon__item ">8мм</div>
+        </div>
+        <div class="input__type input__item">
+          <div id="6mm" class="type__item active">помещение</div>
+          |
+          <div id="8mm" class="type__item ">уличная</div>
+        </div>
+      </div>
+      <div class="client__block">
+        <div class="client__info">
+          Ваша специальная стоимость с учетом сезонной скидки 20%
+        </div>
+        <div class="client__old-price" contenteditable="true">40000</div>
+        <div class="client__new-price" contenteditable="true">30000</div>
+        <div class="client__info" contenteditable="true">
+          Предложение действует до <span class="promotionPeriod">14.06.23</span>
+        </div>
+      </div>
+      <div class="product__info">
+        <p>
+          <b style="color:rgb(42, 171, 231)">Материал вывески:</b> прозрачный
+          монолитный поликарбонат 4 мм. Не бьется и не выцветает на солнце.<br /><br />
+
+          <b style="color:rgb(42, 171, 231)">Гибкий неон:</b> светорассеивающая
+          силиконовая оплетка. Кратность реза 1 см. Самый качественный и дорогой
+          материал на рынке в большим сроком службы более 6 лет непрерывного
+          свечения.<br /><br />
+
+          <b style="color:rgb(42, 171, 231)">Заглушки:</b> всегда клеятся на
+          концы неоновых элементов для большей эстетичности.
+        </p>
+      </div>
+      <div class="product__preview">
+        <svg
+          id="svg"
+          style="fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 3px;"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 300 300"
+          height=" 1500"
+          width="1500"
+          overflow="visible"
+        >
+          <filter
+            id="warm-glow"
+            x="-5000%"
+            y="-5000%"
+            width="10000%"
+            height="10000%"
+          >
+            <feFlood
+              result="flood"
+              flood-color="yellow"
+              flood-opacity=".5"
+            ></feFlood>
+            <feComposite
+              in="flood"
+              result="mask"
+              in2="SourceGraphic"
+              operator="in"
+            ></feComposite>
+            <feMorphology
+              in="mask"
+              result="dilated"
+              operator="dilate"
+              radius="5"
+            ></feMorphology>
+            <feGaussianBlur
+              in="dilated"
+              result="blurred"
+              stdDeviation="10"
+            ></feGaussianBlur>
+            <feMerge>
+              <feMergeNode in="blurred"></feMergeNode>
+              <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+          </filter>
+          <filter
+            id="darkblue-glow"
+            x="-5000%"
+            y="-5000%"
+            width="10000%"
+            height="10000%"
+          >
+            <feFlood
+              result="flood"
+              flood-color="rgb(45, 88, 255)"
+              flood-opacity=".5"
+            ></feFlood>
+            <feComposite
+              in="flood"
+              result="mask"
+              in2="SourceGraphic"
+              operator="in"
+            ></feComposite>
+            <feMorphology
+              in="mask"
+              result="dilated"
+              operator="dilate"
+              radius="5"
+            ></feMorphology>
+            <feGaussianBlur
+              in="dilated"
+              result="blurred"
+              stdDeviation="10"
+            ></feGaussianBlur>
+            <feMerge>
+              <feMergeNode in="blurred"></feMergeNode>
+              <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+          </filter>
+          <filter
+            id="red-glow"
+            x="-5000%"
+            y="-5000%"
+            width="10000%"
+            height="10000%"
+          >
+            <feFlood
+              result="flood"
+              flood-color="rgb(255, 42, 42)"
+              flood-opacity=".5"
+            ></feFlood>
+            <feComposite
+              in="flood"
+              result="mask"
+              in2="SourceGraphic"
+              operator="in"
+            ></feComposite>
+            <feMorphology
+              in="mask"
+              result="dilated"
+              operator="dilate"
+              radius="5"
+            ></feMorphology>
+            <feGaussianBlur
+              in="dilated"
+              result="blurred"
+              stdDeviation="10"
+            ></feGaussianBlur>
+            <feMerge>
+              <feMergeNode in="blurred"></feMergeNode>
+              <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+          </filter>
+          <filter
+            id="yellow-glow"
+            x="-5000%"
+            y="-5000%"
+            width="10000%"
+            height="10000%"
+          >
+            <feFlood
+              result="flood"
+              flood-color="yellow"
+              flood-opacity=".5"
+            ></feFlood>
+            <feComposite
+              in="flood"
+              result="mask"
+              in2="SourceGraphic"
+              operator="in"
+            ></feComposite>
+            <feMorphology
+              in="mask"
+              result="dilated"
+              operator="dilate"
+              radius="5"
+            ></feMorphology>
+            <feGaussianBlur
+              in="dilated"
+              result="blurred"
+              stdDeviation="10"
+            ></feGaussianBlur>
+            <feMerge>
+              <feMergeNode in="blurred"></feMergeNode>
+              <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+          </filter>
+          <filter
+            id="cold-glow"
+            x="-5000%"
+            y="-5000%"
+            width="10000%"
+            height="10000%"
+          >
+            <feFlood
+              result="flood"
+              flood-color="rgb(0, 255, 185)"
+              flood-opacity=".5"
+            ></feFlood>
+            <feComposite
+              in="flood"
+              result="mask"
+              in2="SourceGraphic"
+              operator="in"
+            ></feComposite>
+            <feMorphology
+              in="mask"
+              result="dilated"
+              operator="dilate"
+              radius="2"
+            ></feMorphology>
+            <feGaussianBlur
+              in="dilated"
+              result="blurred"
+              stdDeviation="5"
+            ></feGaussianBlur>
+            <feMerge>
+              <feMergeNode in="blurred"></feMergeNode>
+              <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+          </filter>
+          <filter
+            id="pink-glow"
+            x="-5000%"
+            y="-5000%"
+            width="10000%"
+            height="10000%"
+          >
+            <feFlood
+              result="flood"
+              flood-color="rgb(255, 40, 226)"
+              flood-opacity=".5"
+            ></feFlood>
+            <feComposite
+              in="flood"
+              result="mask"
+              in2="SourceGraphic"
+              operator="in"
+            ></feComposite>
+            <feMorphology
+              in="mask"
+              result="dilated"
+              operator="dilate"
+              radius="2"
+            ></feMorphology>
+            <feGaussianBlur
+              in="dilated"
+              result="blurred"
+              stdDeviation="5"
+            ></feGaussianBlur>
+            <feMerge>
+              <feMergeNode in="blurred"></feMergeNode>
+              <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+          </filter>
+          <filter
+            id="green-glow"
+            x="-5000%"
+            y="-5000%"
+            width="10000%"
+            height="10000%"
+          >
+            <feFlood
+              result="flood"
+              flood-color="rgb(80, 255, 77)"
+              flood-opacity=".5"
+            ></feFlood>
+            <feComposite
+              in="flood"
+              result="mask"
+              in2="SourceGraphic"
+              operator="in"
+            ></feComposite>
+            <feMorphology
+              in="mask"
+              result="dilated"
+              operator="dilate"
+              radius="2"
+            ></feMorphology>
+            <feGaussianBlur
+              in="dilated"
+              result="blurred"
+              stdDeviation="5"
+            ></feGaussianBlur>
+            <feMerge>
+              <feMergeNode in="blurred"></feMergeNode>
+              <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+          </filter>
+          <filter
+            id="blue-glow"
+            x="-5000%"
+            y="-5000%"
+            width="10000%"
+            height="10000%"
+          >
+            <feFlood
+              result="flood"
+              flood-color="rgb(42, 171, 231)"
+              flood-opacity=".5"
+            ></feFlood>
+            <feComposite
+              in="flood"
+              result="mask"
+              in2="SourceGraphic"
+              operator="in"
+            ></feComposite>
+            <feMorphology
+              in="mask"
+              result="dilated"
+              operator="dilate"
+              radius="2"
+            ></feMorphology>
+            <feGaussianBlur
+              in="dilated"
+              result="blurred"
+              stdDeviation="5"
+            ></feGaussianBlur>
+            <feMerge>
+              <feMergeNode in="blurred"></feMergeNode>
+              <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+          </filter>
+          <filter
+            id="white-glow"
+            x="-5000%"
+            y="-5000%"
+            width="10000%"
+            height="10000%"
+          >
+            <feFlood
+              result="flood"
+              flood-color="white"
+              flood-opacity=".5"
+            ></feFlood>
+            <feComposite
+              in="flood"
+              result="mask"
+              in2="SourceGraphic"
+              operator="in"
+            ></feComposite>
+            <feMorphology
+              in="mask"
+              result="dilated"
+              operator="dilate"
+              radius="2"
+            ></feMorphology>
+            <feGaussianBlur
+              in="dilated"
+              result="blurred"
+              stdDeviation="5"
+            ></feGaussianBlur>
+            <feMerge>
+              <feMergeNode in="blurred"></feMergeNode>
+              <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+          </filter>
+          <g id="svg-wrapper"></g>
+        </svg>
+        <div class="product__width">100см</div>
+        <div class="product__height">10см</div>
+      </div>
+
+      <div class="params__outputs">
+        <ol class="productFonts"></ol>
+        <div class="laminate">
+          <div class="laminate__label"></div>
+          <div class="laminate__none">X</div>
+        </div>
+        <div class="outputs">
+          <div class="elements">0</div>
+          <div class="metrs">0</div>
+          <div class="square">0</div>
+          <div class="power">0</div>
+          <div class="adapter">0</div>
+        </div>
+        <button class="svg-button">SVG</button>
+      </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
+<!-- <script>
+  const letters = document.querySelectorAll('path')
+  let translate = 0;
+  for (let i = 0; i < letters.length; i++) {
+    letters[i].setAttribute("transform", `translate(${translate},0)`);
+    translate += 100;
+  }
+</script> -->
