@@ -16,7 +16,7 @@ const colors = {
 };
 
 const product = {
-  strings: [{ text: "EasyNeon", mt: 20, scale: 1, color: "rgb(255, 145, 0)" }],
+  strings: [{ text: "NeonWork", mt: 20, scale: 1, color: "rgb(255, 145, 0)" }],
   currentFont: fonts[0],
   aling: "center",
   counter: "square",
